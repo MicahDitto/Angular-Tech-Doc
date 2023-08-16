@@ -13,23 +13,54 @@
 <body>
     <nav id="navbar" class="side-nav">
         <header>
-            Angular
+            <h1>Angular Docs</h1>
         </header>
-        <a class="nav-link" href="#Introduction">Introduction</a>
-        <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
-        <a class="nav-link" href="#Angular_Overview">Angular Overview</a>
-        <a class="nav-link" href="#Hello_World">Hello world</a>
-        <a class="nav-link" href="#Components">Components</a>
-        <a class="nav-link" href="#Creating_components">Creating components</a>
-        <a class="nav-link" href="#Component_metadata">Component metadata</a>
-        <a class="nav-link" href="#Template_Syntax">Template syntax</a>
-        <a class="nav-link" href="#Data_Binding">Data binding</a>
-        <a class="nav-link" href="#Directives">Directives</a>
+        <hr>
+        <a class="nav-link" href="#Introduction"><span class="link-code">&lt;</span>
+            
+            Introduction<span class="link-code">/&gt;</span></a>
+        <hr>
+        <a class="nav-link" href="#What_you_should_already_know"><span class="link-code">&lt;</span>
+            
+            What you should already know<span class="link-code">/&gt;</span></a>
+        <hr>
+        <a class="nav-link" href="#Angular_Overview"><span class="link-code">&lt;</span>
+            
+            Angular Overview<span class="link-code">/&gt;</span></a>
+        <hr>
+        <a class="nav-link" href="#Hello_World"><span class="link-code">&lt;</span>
+            
+            Hello world<span class="link-code">/&gt;</span></a>
+        <hr>
+        <a class="nav-link" href="#Components"><span class="link-code">&lt;</span>
+            
+            Components<span class="link-code">/&gt;</span></a>
+        <hr>
+        <a class="nav-link" href="#Component_metadata"><span class="link-code">&lt;</span>
+            
+            Component metadata<span class="link-code">/&gt;</span></a>
+        <hr>
+        <a class="nav-link" href="#Template_Syntax"><span class="link-code">&lt;</span>
+            
+            Template syntax<span class="link-code">/&gt;</span></a>
+        <hr>
+        <a class="nav-link" href="#Data_Binding"><span class="link-code">&lt;</span>
+            
+            Data binding<span class="link-code">/&gt;</span></a>
+        <hr>
+        <a class="nav-link" href="#Directives"><span class="link-code">&lt;</span>
+            
+            Directives<span class="link-code">/&gt;</span></a>
+        <hr>
+        <a class="nav-link" href="#Conclusion"><span class="link-code">&lt;</span>
+            
+            Conclusion<span class="link-code">/&gt;</span></a>
 
     </nav>
     <main id="main-doc">
+        
+        <h1 id="Angular_Documentation">Angular Documentation</h1>
         <hr>
-        <h1>Angular Documentation</h1>
 
         <section id="Introduction" class="section main-section intro-section">
             <header>
@@ -215,34 +246,329 @@
         </section>
         <section id="Components" class="section main-section -section">
             <hr>
-            <header>Components</header>
-            <p></p>
-            <code></code>
-        </section>
-        <section id="Creating_Components" class="section main-section -section">
-            <header>Creating Components</header>
-            <p></p>
-            <code></code>
+            <header>
+                <h1>Components</h1>
+            </header>
+            <p>Components are the fundamental building blocks of Angular applications, allowing you to create modular,
+                reusable, and encapsulated pieces of user interface and functionality.</p>
+            <h3>Creating Components</h3>
+            <p>Components consist of three main parts and one optional:
+                <ul>
+                    <li>
+                        the component class,
+                    </li>
+                    <li>
+                        the template,
+                    </li>
+                    <li>
+                        the styles,
+                    </li>
+                    <li>
+                        (and the tests).
+                    </li>
+                </ul> Let's walk
+                through the steps to create a component from scratch.</p>
+            <ol>
+                <li>
+                    <h3>Generate the Component:</h3>
+                    <p>Using Angular CLI, you can generate a new component with the following command:</p>
+                    <code>ng generate component component-name</code>
+                    <p>This will create a folder containing the component files in the appropriate directory structure.
+                    </p>
+                </li>
+                <li>
+                    <h3>Component Class:</h3>
+                    <p>Open the generated <b><i>.ts</i></b> file in the <b><i>component-name</i></b> folder. This is the
+                        component class where you
+                        define the component's properties, methods, and behavior. You can also use decorators to
+                        configure the component's metadata.</p>
+                </li>
+                <li>
+                    <h3>Template:</h3>
+                    <p>The component's template defines the structure and layout of the user interface. Open the
+                        <b><i>.html</i></b>
+                        file in the same folder and write the HTML code that represents your component's appearance.</p>
+                </li>
+                <li>
+                    <h3>Styles:</h3>
+                    <p>If needed, you can add styles to your component using the <b><i>.css </i></b>file in the same
+                        folder. These
+                        styles will only apply to the component, following Angular's encapsulated style approach.</p>
+                </li>
+            </ol>
+
+            <h3>Component Interaction</h3>
+            <p>Components can communicate with each other by passing data between them. This can be achieved through
+                <b><i>@Input </i></b>and <b><i>@Output</i></b> properties, allowing parent and child components to share
+                data.</p>
+            <h3>Component Lifecycle Hooks</h3>
+            <p>Angular provides a set of lifecycle hooks that allow you to perform actions at specific points in a
+                component's lifecycle. Common hooks include <b><i>ngOnInit</i></b>, <b><i>ngOnChanges</i></b>,
+                <b><i>ngAfterViewInit</i></b>, and more.</p>
         </section>
         <section id="Component_metadata" class="section main-section -section">
-            <header>Component Metadata</header>
-            <p></p>
-            <code></code>
+            <header>
+                <h1>Component Metadata</h1>
+            </header>
+            <p>Welcome to the "Component Metadata" section, where we'll delve into the metadata decorators that play a
+                crucial role in configuring Angular components. Metadata decorators provide information about a
+                component and guide Angular on how to process and render it.</p>
+            <h3>The <b><i>@Component</i></b> Decorator</h3>
+            <p>This decorator is used to define metadata for a component. This decorator takes an object with various
+                properties
+                that influence the behavior of the component. Some of the key properties include:</p>
+            <ul>
+                <li><b><i>selector</i></b>: Specifies the custom HTML element that represents the component.</li>
+                <li><b><i>template</i></b> or <b><i>templateUrl</i></b>: Defines the inline HTML template or the
+                    external template file for the component's view.</li>
+                <li><b><i>styleUrls</i></b>: An array of external style files for the component's styles.</li>
+                <li><b><i>inputs</i></b>: Lists of input and output properties for component interaction.</li>
+            </ul>
+            <p>Example: (TS)</p>
+            <code>@Component({
+            selector: 'app-example',
+            templateUrl: './example.component.html',
+            styleUrls: ['./example.component.css']
+            })
+            </code>
+
+            <p><b><i>@Input</i></b> and <b><i>@Output</i></b> Decorators
+                The <b><i>@Input</i></b> and <b><i>@Output</i></b> decorators allow components to communicate by passing
+                data between them. <b><i>@Input</i></b>
+                is used to bind a property of a child component to a property of a parent component, while
+                <b><i>@Output</i></b>
+                allows a child component to emit events that a parent component can listen to.</p>
+            <p>Example: (TS)</p>
+            <code>
+                    @Component({
+                        selector: 'app-parent',
+                        template: '<app-child [inputData]="parentData" (outputEvent)="handleEvent($event)"></app-child>'
+                      })
+                      export class ParentComponent {
+                        parentData = 'Hello from parent!';
+                        handleEvent(eventData: string) {
+                          console.log(eventData);
+                        }
+                      }
+                      
+                      </code>
+            <p>Understanding component metadata is essential for configuring and customizing your Angular components.
+                The @Component, @Input, and @Output decorators enable you to define the structure, behavior, and
+                interaction patterns of your components, contributing to a more dynamic and modular application
+                architecture.
+
+            </p>
         </section>
         <section id="Template_Syntax" class="section main-section -section">
-            <header>Template Syntax</header>
-            <p></p>
-            <code></code>
+            <header>
+                <h1>Template Syntax</h1>
+            </header>
+            <p>Welcome to the "Template Syntax" section, where we'll delve into Angular's powerful template syntax.
+                Templates are an integral part of Angular components, allowing you to define how your components' views
+                should be rendered. Angular's template syntax empowers you to create dynamic and interactive user
+                interfaces.</p>
+            <h3>Interpolation</h3>
+            <p>Interpolation is a fundamental feature of Angular's template syntax. It allows you to embed expressions
+                within double curly braces ({{ }}) in your templates. These expressions are evaluated and their results
+                are displayed within the HTML.</p>
+            <p>Example: (html)</p>
+            <code>&lt;p&gt;Welcome, {{ username }}!&lt;/p&gt;
+            </code>
+            <p>In the above example, if <b><i>username</i></b> is a property in your component, its value will be
+                dynamically displayed within the paragraph.</p>
+            <h3>Directives</h3>
+            <p>Angular provides a range of built-in directives that modify the structure or behavior of the DOM. Some
+                common directives include:</p>
+            <ul>
+                <li><b><i>ngIf</i></b>: Conditionally renders elements based on an expression.</li>
+                <li><b><i>ngFor</i></b>: Iterates over a collection and generates elements for each item.</li>
+                <li><b><i>ngSwitch</i></b>: Conditionally displays content based on a selection.</li>
+            </ul>
+            <p>Example: (html)</p>
+            <code>
+                        &lt;ul&gt; 
+                            &lt;li *ngFor="let item of items"&gt; {{ item }}&lt;/li&gt; 
+                        &lt;/ul&gt;    
+                </code>
+            <h3>Property Binding</h3>
+            <p>Property binding allows you to set an element's property to a value from your component's data. Enclose
+                the property name in square brackets (<b><i>[]</i></b>) and assign it the value of an expression.</p>
+            <p>Example: (html)</p>
+            <code>
+                    &lt;img [src]="imageUrl" alt="Angular Logo"&gt;
+            </code>
+
+            <h3>Event Binding</h3>
+            <p>Event binding lets you respond to user interactions by executing methods in your component. Enclose the
+                event name in parentheses (<b><i>()</i></b>) and provide the method to be called.</p>
+            <p>Example: (html)</p>
+            <code>
+                    &lt;button (click)="handleClick()"&gt; Click me&lt;/button&gt; 
+            </code>
+            <h3>Two-Way Data Binding</h3>
+            <p>Two-way data binding combines property binding and event binding, allowing changes in an input element to
+                simultaneously update a property in the component and vice versa.</p>
+            <p>Example: (html)
+            </p>
+            <code>
+                    &lt;input [(ngModel)]="username"&gt;
+            </code>
+            <h3>Summary</h3>
+            <p>Angular's template syntax provides a powerful way to create dynamic, data-driven user interfaces. Whether
+                it's displaying data, iterating over collections, or responding to user interactions, Angular's template
+                syntax empowers you to create rich and interactive web applications.</p>
         </section>
         <section id="Data_Binding" class="section main-section -section">
-            <header>Data Binding</header>
-            <p></p>
-            <code></code>
+            <header>
+                <h1>Data Binding</h1>
+            </header>
+            <p>Welcome to the "Data Binding" section, where we'll explore the various ways to establish a connection
+                between your component's data and your template. Data binding in Angular enables you to keep your user
+                interface in sync with your application's data, creating dynamic and responsive user experiences.</p>
+            <h3>One-Way Data Binding</h3>
+            <p>Angular supports several forms of one-way data binding:</p>
+            <ol>
+                <li>
+                    <h3>Interpolation:</h3>
+                    <p>Interpolation binds component properties to template expressions using double curly braces
+                        (<b><i>{{ }}</i></b>).</p>
+                    <p>Example: (html)</p>
+                    <code>
+                                &lt;p&gt; {{ message }} &lt;/p&gt; 
+
+                        </code>
+                </li>
+                <li>
+                    <h3>Property Binding:</h3>
+                    <p>Property binding sets an element's property to the value of an expression. Use square brackets
+                        (<b><i>[]</i></b>) to indicate property binding.</p>
+                    <p>Example: (html)</p>
+                    <code>
+                                &lt;img [src]="imageUrl" alt="Angular Logo"&gt;
+                        </code>
+                </li>
+                <li>
+                    <h3>Attribute Binding:</h3>
+                    <p>Attribute binding binds an element's attribute to the value of an expression, even if the
+                        attribute is not a standard HTML property. Use square brackets (<b><i>[]</i></b>) to indicate
+                        attribute
+                        binding.</p>
+                    <p>Example: (html)</p>
+                    <code>
+                                &lt;a [attr.href]="linkUrl"&gt;Click here&lt;/a&gt;
+
+                        </code>
+                </li>
+            </ol>
+            <h3>Two-Way Data Binding</h3>
+            <p>Two-way data binding combines property binding and event binding to create a seamless synchronization
+                between a form control and a component property.</p>
+            <p>Example: (html)</p>
+
+            <code>
+                    &lt;input [(ngModel)]="username"&gt;
+            </code>
+            <h3>Event Binding</h3>
+            <p>Event binding allows you to listen for events triggered by the user and respond with component methods.
+                Use parentheses (<b><i>()</i></b>) to indicate event binding.</p>
+            <p>Example:</p>
+            <code>
+                        &lt;button (click)="handleClick()"&gt;Click me&lt;/button&gt;
+                </code>
+            <P>Data binding in Angular bridges the gap between your component's data and your template's user interface,
+                enabling real-time updates and dynamic interactions. Whether it's displaying content, handling user
+                input, or syncing data changes bidirectionally, Angular's data binding features play a central role in
+                creating rich and responsive applications.</P>
+
         </section>
         <section id="Directives" class="section main-section -section">
-            <header>Directives</header>
-            <p></p>
+            <header>
+                <h1>Directives</h1>
+            </header>
+            <p>Directives are a fundamental part of Angular's template syntax, enabling you to extend HTML elements with
+                new behavior or manipulate their appearance.</p>
             <code></code>
+            <h3>Built-in Directives</h3>
+            <ul>
+                <li><b><i>ngIf</i></b>: Conditionally renders elements based on an expression.</li>
+                <li><b><i>ngFor</i></b>: Iterates over a collection and generates elements for each item.</li>
+                <li><b><i>ngSwitch</i></b>: Conditionally displays content based on a selection.</li>
+                <li><b><i>ngClass</i></b>: Dynamically apply CSS classes.</li>
+                <li><b><i>ngStyle</i></b>: Dynamically apply CSS styles.</li>
+            </ul>
+            <p>Example: (html)</p>
+            <code>
+                    &lt;div *ngIf="showContent"&gt;Content is visible!&lt;/div&gt;
+                    &lt;ul&gt;
+                                &lt;li *ngFor="let item of items"&gt;{{ item }}&lt;/li&gt;
+                                &lt;/ul&gt;
+                </code>
+            <h3>Custom Directives</h3>
+            <p>In addition to built-in directives, Angular allows you to create your own custom directives. Custom
+                directives provide a way to encapsulate complex behavior, reusability, and enhanced readability in your
+                templates.</p>
+
+            <h3>Structural Directives vs. Attribute Directives</h3>
+            <p>Angular directives can be categorized into two main types: structural directives and attribute
+                directives. </p>
+            <ul>
+                <li><b><i>Structural Directives</i></b>: Structural directives change the structure of the DOM by adding
+                    or removing
+                    elements. They use asterisk (<b><i>*</i></b>) notation and include <b><i>ngIf</i></b>,
+                    <b><i>ngFor</i></b>, and <b><i>ngSwitch</i></b>.</li>
+                <li><b><i>Attribute Directives</i></b>: Attribute directives modify the behavior or appearance of
+                    elements by changing their attributes. Examples include <b><i>ngClass</i></b>, <b><i>ngStyle</i></b>
+                    and custom directives you create.</li>
+            </ul>
+            <h3>Directives and Template Syntax</h3>
+            <p>Directives are an integral part of Angular's template syntax, enabling you to enhance your templates with
+                dynamic behavior and style. By leveraging both built-in and custom directives, you can create user
+                interfaces that are both interactive and visually appealing.</p>
+            <h3>Directives Summary</h3>
+            <p>Directives are a powerful tool that enables you to extend HTML's capabilities in Angular applications.
+                Whether you're leveraging built-in directives to control the flow of content or creating custom
+                directives to encapsulate specific behavior, directives are an essential concept for building
+                feature-rich and dynamic user interfaces.
+            </p>
+        </section>
+        <section id="Conclusion" class="section main-section ">
+            <header>
+                <h1>Conclusion</h1>
+            </header>
+            <p>Congrats! You've journeyed through the key concepts of Angular, a powerful framework that empowers
+                developers to build dynamic and robust web applications. From understanding the basics of components and
+                data binding to exploring directives and template syntax, you've gained insights into the foundational
+                elements that make Angular a preferred choice for modern web development.
+
+                As you continue your Angular journey, remember that this documentation is just the beginning. The
+                Angular ecosystem is vast and continually evolving, offering a wealth of resources, libraries, and tools
+                to help you create exceptional applications.</p>
+            <h3>Next Steps</h3>
+            <ol>
+                <li><b><i>Practice and Experiment</i></b>: The best way to solidify your understanding is by getting hands-on
+                    experience.
+                    Create your own projects, experiment with different features, and explore advanced concepts.
+                </li>
+                <li><b><i>Explore the Angular CLI</i></b>: The Angular CLI is a powerful command-line tool that streamlines the
+                    development process. Familiarize yourself with its capabilities to boost your productivity.
+                </li>
+                <li><b><i>Read Official Documentation</i></b>: <a href="https://angular.io/docs">Angular's official documentation </a>is a valuable resource for in-depth
+                    information about every aspect of the framework. It's always up-to-date and provides comprehensive
+                    explanations.
+                </li>
+                <li><b><i>Check out Angular Material</i></b>: Angular Material is a UI component library that follows Angular's
+                    principles. It provides a set of ready-to-use components to enhance your application's look and
+                    feel.
+                </li>
+                <li><b><i>Community and Learning Resources</i></b> Engage with the vibrant Angular community through forums, social
+                    media, and developer events. Online tutorials, courses, and books are also excellent ways to enhance
+                    your skills.
+                </li>
+            </ol>
+            <p>Remember that mastery comes with practice and continuous learning. Whether you're building a personal
+                project or contributing to a larger application, your understanding of Angular's concepts will serve as
+                a solid foundation.</p>
+
         </section>
 
 
