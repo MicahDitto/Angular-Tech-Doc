@@ -17,48 +17,48 @@
         </header>
         <hr>
         <a class="nav-link" href="#Introduction"><span class="link-code">&lt;</span>
-            
+
             Introduction<span class="link-code">/&gt;</span></a>
         <hr>
         <a class="nav-link" href="#What_you_should_already_know"><span class="link-code">&lt;</span>
-            
+
             What you should already know<span class="link-code">/&gt;</span></a>
         <hr>
         <a class="nav-link" href="#Angular_Overview"><span class="link-code">&lt;</span>
-            
+
             Angular Overview<span class="link-code">/&gt;</span></a>
         <hr>
         <a class="nav-link" href="#Hello_World"><span class="link-code">&lt;</span>
-            
+
             Hello world<span class="link-code">/&gt;</span></a>
         <hr>
         <a class="nav-link" href="#Components"><span class="link-code">&lt;</span>
-            
+
             Components<span class="link-code">/&gt;</span></a>
         <hr>
         <a class="nav-link" href="#Component_metadata"><span class="link-code">&lt;</span>
-            
+
             Component metadata<span class="link-code">/&gt;</span></a>
         <hr>
         <a class="nav-link" href="#Template_Syntax"><span class="link-code">&lt;</span>
-            
+
             Template syntax<span class="link-code">/&gt;</span></a>
         <hr>
         <a class="nav-link" href="#Data_Binding"><span class="link-code">&lt;</span>
-            
+
             Data binding<span class="link-code">/&gt;</span></a>
         <hr>
         <a class="nav-link" href="#Directives"><span class="link-code">&lt;</span>
-            
+
             Directives<span class="link-code">/&gt;</span></a>
         <hr>
         <a class="nav-link" href="#Conclusion"><span class="link-code">&lt;</span>
-            
+
             Conclusion<span class="link-code">/&gt;</span></a>
 
     </nav>
     <main id="main-doc">
-        
+
         <h1 id="Angular_Documentation">Angular Documentation</h1>
         <hr>
 
@@ -86,8 +86,8 @@
                     static typing, enhanced tooling, and improved code maintainability.</li>
             </ol>
         </section>
+        <hr>
         <section id="What_you_should_already_know" class="section main-section -section">
-            <hr>
             <header>
                 <h1>What you should already know</h1>
             </header>
@@ -138,8 +138,8 @@
                 don't worry! We're here to guide you through the learning journey, ensuring that you have a meaningful
                 and engaging experience as you interact with our content.</p>
         </section>
+        <hr>
         <section id="Angular_Overview" class="section main-section">
-            <hr>
             <header>
                 <h1>Angular Overview</h1>
             </header>
@@ -199,8 +199,8 @@
                 </li>
             </ul>
         </section>
+        <hr>
         <section id="Hello_World" class="section main-section ">
-            <hr>
             <header>
                 <h1>Hello World</h1>
             </header>
@@ -244,8 +244,8 @@
                 you to build dynamic and interactive web applications with ease.</p>
 
         </section>
+        <hr>
         <section id="Components" class="section main-section -section">
-            <hr>
             <header>
                 <h1>Components</h1>
             </header>
@@ -306,6 +306,7 @@
                 component's lifecycle. Common hooks include <b><i>ngOnInit</i></b>, <b><i>ngOnChanges</i></b>,
                 <b><i>ngAfterViewInit</i></b>, and more.</p>
         </section>
+        <hr>
         <section id="Component_metadata" class="section main-section -section">
             <header>
                 <h1>Component Metadata</h1>
@@ -326,9 +327,9 @@
             </ul>
             <p>Example: (TS)</p>
             <code>@Component({
-            selector: 'app-example',
-            templateUrl: './example.component.html',
-            styleUrls: ['./example.component.css']
+                    &nbsp;&nbsp;selector: 'app-example',
+            &nbsp;&nbsp;templateUrl: './example.component.html',
+            &nbsp;&nbsp;styleUrls: ['./example.component.css']
             })
             </code>
 
@@ -339,19 +340,16 @@
                 <b><i>@Output</i></b>
                 allows a child component to emit events that a parent component can listen to.</p>
             <p>Example: (TS)</p>
-            <code>
-                    @Component({
-                        selector: 'app-parent',
-                        template: '<app-child [inputData]="parentData" (outputEvent)="handleEvent($event)"></app-child>'
+            <code>@Component({
+                    &nbsp;&nbsp;selector: 'app-parent',
+                    &nbsp;&nbsp;template: '<app-child [inputData]="parentData" (outputEvent)="handleEvent($event)"></app-child>'
                       })
                       export class ParentComponent {
-                        parentData = 'Hello from parent!';
-                        handleEvent(eventData: string) {
-                          console.log(eventData);
-                        }
-                      }
-                      
-                      </code>
+                        &nbsp;&nbsp;parentData = 'Hello from parent!';
+                        &nbsp;&nbsp;handleEvent(eventData: string) {
+                            &nbsp;&nbsp;&nbsp;&nbsp;console.log(eventData);
+                            &nbsp;&nbsp;}
+                      }</code>
             <p>Understanding component metadata is essential for configuring and customizing your Angular components.
                 The @Component, @Input, and @Output decorators enable you to define the structure, behavior, and
                 interaction patterns of your components, contributing to a more dynamic and modular application
@@ -359,6 +357,7 @@
 
             </p>
         </section>
+        <hr>
         <section id="Template_Syntax" class="section main-section -section">
             <header>
                 <h1>Template Syntax</h1>
@@ -385,39 +384,36 @@
                 <li><b><i>ngSwitch</i></b>: Conditionally displays content based on a selection.</li>
             </ul>
             <p>Example: (html)</p>
-            <code>
-                        &lt;ul&gt; 
-                            &lt;li *ngFor="let item of items"&gt; {{ item }}&lt;/li&gt; 
+            <code>&lt;ul&gt; 
+                    &nbsp;&nbsp; &lt;li *ngFor="let item of items"&gt; {{ item }}&lt;/li&gt; 
                         &lt;/ul&gt;    
                 </code>
             <h3>Property Binding</h3>
             <p>Property binding allows you to set an element's property to a value from your component's data. Enclose
                 the property name in square brackets (<b><i>[]</i></b>) and assign it the value of an expression.</p>
             <p>Example: (html)</p>
-            <code>
-                    &lt;img [src]="imageUrl" alt="Angular Logo"&gt;
+            <code>&lt;img [src]="imageUrl" alt="Angular Logo"&gt;
             </code>
 
             <h3>Event Binding</h3>
             <p>Event binding lets you respond to user interactions by executing methods in your component. Enclose the
                 event name in parentheses (<b><i>()</i></b>) and provide the method to be called.</p>
             <p>Example: (html)</p>
-            <code>
-                    &lt;button (click)="handleClick()"&gt; Click me&lt;/button&gt; 
+            <code>&lt;button (click)="handleClick()"&gt; Click me&lt;/button&gt; 
             </code>
             <h3>Two-Way Data Binding</h3>
             <p>Two-way data binding combines property binding and event binding, allowing changes in an input element to
                 simultaneously update a property in the component and vice versa.</p>
             <p>Example: (html)
             </p>
-            <code>
-                    &lt;input [(ngModel)]="username"&gt;
+            <code>&lt;input [(ngModel)]="username"&gt;
             </code>
             <h3>Summary</h3>
             <p>Angular's template syntax provides a powerful way to create dynamic, data-driven user interfaces. Whether
                 it's displaying data, iterating over collections, or responding to user interactions, Angular's template
                 syntax empowers you to create rich and interactive web applications.</p>
         </section>
+        <hr>
         <section id="Data_Binding" class="section main-section -section">
             <header>
                 <h1>Data Binding</h1>
@@ -433,9 +429,7 @@
                     <p>Interpolation binds component properties to template expressions using double curly braces
                         (<b><i>{{ }}</i></b>).</p>
                     <p>Example: (html)</p>
-                    <code>
-                                &lt;p&gt; {{ message }} &lt;/p&gt; 
-
+                    <code>&lt;p&gt; {{ message }} &lt;/p&gt; 
                         </code>
                 </li>
                 <li>
@@ -443,8 +437,7 @@
                     <p>Property binding sets an element's property to the value of an expression. Use square brackets
                         (<b><i>[]</i></b>) to indicate property binding.</p>
                     <p>Example: (html)</p>
-                    <code>
-                                &lt;img [src]="imageUrl" alt="Angular Logo"&gt;
+                    <code>&lt;img [src]="imageUrl" alt="Angular Logo"&gt;
                         </code>
                 </li>
                 <li>
@@ -454,10 +447,8 @@
                         attribute
                         binding.</p>
                     <p>Example: (html)</p>
-                    <code>
-                                &lt;a [attr.href]="linkUrl"&gt;Click here&lt;/a&gt;
-
-                        </code>
+                    <code>&lt;a [attr.href]="linkUrl"&gt;Click here&lt;/a&gt;
+                    </code>
                 </li>
             </ol>
             <h3>Two-Way Data Binding</h3>
@@ -465,15 +456,13 @@
                 between a form control and a component property.</p>
             <p>Example: (html)</p>
 
-            <code>
-                    &lt;input [(ngModel)]="username"&gt;
+            <code>&lt;input [(ngModel)]="username"&gt;
             </code>
             <h3>Event Binding</h3>
             <p>Event binding allows you to listen for events triggered by the user and respond with component methods.
                 Use parentheses (<b><i>()</i></b>) to indicate event binding.</p>
             <p>Example:</p>
-            <code>
-                        &lt;button (click)="handleClick()"&gt;Click me&lt;/button&gt;
+            <code>&lt;button (click)="handleClick()"&gt;Click me&lt;/button&gt;
                 </code>
             <P>Data binding in Angular bridges the gap between your component's data and your template's user interface,
                 enabling real-time updates and dynamic interactions. Whether it's displaying content, handling user
@@ -481,13 +470,13 @@
                 creating rich and responsive applications.</P>
 
         </section>
+        <hr>
         <section id="Directives" class="section main-section -section">
             <header>
                 <h1>Directives</h1>
             </header>
             <p>Directives are a fundamental part of Angular's template syntax, enabling you to extend HTML elements with
                 new behavior or manipulate their appearance.</p>
-            <code></code>
             <h3>Built-in Directives</h3>
             <ul>
                 <li><b><i>ngIf</i></b>: Conditionally renders elements based on an expression.</li>
@@ -497,8 +486,7 @@
                 <li><b><i>ngStyle</i></b>: Dynamically apply CSS styles.</li>
             </ul>
             <p>Example: (html)</p>
-            <code>
-                    &lt;div *ngIf="showContent"&gt;Content is visible!&lt;/div&gt;
+            <code>&lt;div *ngIf="showContent"&gt;Content is visible!&lt;/div&gt;
                     &lt;ul&gt;
                                 &lt;li *ngFor="let item of items"&gt;{{ item }}&lt;/li&gt;
                                 &lt;/ul&gt;
@@ -531,6 +519,7 @@
                 feature-rich and dynamic user interfaces.
             </p>
         </section>
+        <hr>
         <section id="Conclusion" class="section main-section ">
             <header>
                 <h1>Conclusion</h1>
@@ -545,22 +534,27 @@
                 to help you create exceptional applications.</p>
             <h3>Next Steps</h3>
             <ol>
-                <li><b><i>Practice and Experiment</i></b>: The best way to solidify your understanding is by getting hands-on
+                <li><b><i>Practice and Experiment</i></b>: The best way to solidify your understanding is by getting
+                    hands-on
                     experience.
                     Create your own projects, experiment with different features, and explore advanced concepts.
                 </li>
-                <li><b><i>Explore the Angular CLI</i></b>: The Angular CLI is a powerful command-line tool that streamlines the
+                <li><b><i>Explore the Angular CLI</i></b>: The Angular CLI is a powerful command-line tool that
+                    streamlines the
                     development process. Familiarize yourself with its capabilities to boost your productivity.
                 </li>
-                <li><b><i>Read Official Documentation</i></b>: <a href="https://angular.io/docs">Angular's official documentation </a>is a valuable resource for in-depth
+                <li><b><i>Read Official Documentation</i></b>: <a href="https://angular.io/docs">Angular's official
+                        documentation </a>is a valuable resource for in-depth
                     information about every aspect of the framework. It's always up-to-date and provides comprehensive
                     explanations.
                 </li>
-                <li><b><i>Check out Angular Material</i></b>: Angular Material is a UI component library that follows Angular's
+                <li><b><i>Check out Angular Material</i></b>: Angular Material is a UI component library that follows
+                    Angular's
                     principles. It provides a set of ready-to-use components to enhance your application's look and
                     feel.
                 </li>
-                <li><b><i>Community and Learning Resources</i></b> Engage with the vibrant Angular community through forums, social
+                <li><b><i>Community and Learning Resources</i></b> Engage with the vibrant Angular community through
+                    forums, social
                     media, and developer events. Online tutorials, courses, and books are also excellent ways to enhance
                     your skills.
                 </li>

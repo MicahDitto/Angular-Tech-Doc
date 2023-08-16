@@ -76,3 +76,7 @@ h1 a {
 .nav-link:hover .link-code {
   color: #ff7f50;
 }
+main hr {
+  margin: 6rem 0rem 0rem 0rem;
+
+}
