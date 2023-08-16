@@ -8,3 +8,7 @@
   border-right: solid;
   border-color: rgba(0, 22, 22, 0.4);
 }
+
+main {
+    margin: 2rem 2rem 2rem 310px;
+}
