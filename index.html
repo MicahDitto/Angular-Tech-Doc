@@ -28,10 +28,13 @@
 
     </nav>
     <main id="main-doc">
+        <hr>
         <h1>Angular Documentation</h1>
 
         <section id="Introduction" class="section main-section intro-section">
-            <header>Introduction</header>
+            <header>
+                <h1>Introduction</h1>
+            </header>
             <p>Angular is an open-source, TypeScript-based framework developed and maintained by Google. It's designed
                 to streamline the process of building dynamic and responsive web applications. Angular embraces the
                 concept of declarative programming, which means you describe what you want to achieve, and Angular takes
@@ -53,7 +56,10 @@
             </ol>
         </section>
         <section id="What_you_should_already_know" class="section main-section -section">
-            <header>What you should already know</header>
+            <hr>
+            <header>
+                <h1>What you should already know</h1>
+            </header>
             <p>In this section, we'll provide an understanding of the foundational knowledge we expect our readers to
                 have before diving into our Angular-based website. We believe that having a certain level of familiarity
                 with key concepts will enhance your experience and enable you to make the most of our content.</p>
@@ -101,18 +107,114 @@
                 don't worry! We're here to guide you through the learning journey, ensuring that you have a meaningful
                 and engaging experience as you interact with our content.</p>
         </section>
-        <section id="Angular_Overview" class="section main-section -section">
-            <header>Angular Overview</header>
-            <header></header>
-            <p></p>
-            <code></code>
+        <section id="Angular_Overview" class="section main-section">
+            <hr>
+            <header>
+                <h1>Angular Overview</h1>
+            </header>
+            <p>Welcome to the "Angular Overview" section, where we'll provide you with a high-level understanding of the
+                Angular framework and its core concepts. As you delve into our website, you'll discover how Angular
+                empowers developers to create dynamic, responsive, and feature-rich web applications.</p>
+            <h2>Key Concepts</h2>
+            <ul>
+                <li>
+                    <h3>Components and Component-Based Architecture</h3>
+                    <p>Angular is built around the concept of components. A component is a self-contained unit that
+                        encapsulates a portion of the user interface along with its behavior and styles. By using
+                        components, developers can break down complex UIs into smaller, manageable parts, making the
+                        application more modular and maintainable.</p>
+                </li>
+                <li>
+                    <h3>Data Binding and Reactive Programming</h3>
+                    <p>Angular's data binding mechanisms facilitate the synchronization of data between components and
+                        their corresponding templates. This allows developers to create dynamic and interactive user
+                        interfaces without having to manually update the DOM. Additionally, Angular embraces reactive
+                        programming, enabling smooth handling of asynchronous events and data streams.</p>
+                </li>
+                <li>
+                    <h3>Dependency Injection</h3>
+                    <p>Angular employs a powerful technique known as dependency injection (DI). DI allows you to define
+                        dependencies for your components in a way that promotes loose coupling and reusability. This
+                        design pattern enhances code organization and makes testing and maintenance more efficient.</p>
+                </li>
+                <li>
+                    <h3>Routing and Single-Page Applications (SPAs)</h3>
+                    <p>Angular's routing module enables the creation of single-page applications (SPAs). With SPAs,
+                        navigation between different views is seamless, as only portions of the page are updated without
+                        the need for full page reloads. This enhances the user experience by providing a more fluid and
+                        responsive application.</p>
+                </li>
+                <li>
+                    <h3>Directives</h3>
+                    <p>Directives are a key feature of Angular that allow you to extend the behavior of HTML elements.
+                        Angular provides both built-in and custom directives. Built-in directives, such as ngIf and
+                        ngFor, offer powerful ways to conditionally render content and repeat elements based on data.
+
+                    </p>
+                </li>
+                <li>
+                    <h3>Services and Dependency Injection</h3>
+                    <p>Angular's services provide a way to share data, logic, and functionality across different parts
+                        of your application. Services can be injected into components, promoting code reusability and
+                        separation of concerns. This approach streamlines code maintenance and testing.
+
+                    </p>
+                </li>
+                <li>
+                    <h3>TypeScript Integration</h3>
+                    <p>Angular is built with TypeScript, a superset of JavaScript that adds features like static typing,
+                        interfaces, and advanced tooling. TypeScript enhances code quality and helps identify potential
+                        issues early in the development process.</p>
+                </li>
+            </ul>
         </section>
-        <section id="Hello_World" class="section main-section -section">
-            <header>Hello World</header>
-            <p></p>
-            <code></code>
+        <section id="Hello_World" class="section main-section ">
+            <hr>
+            <header>
+                <h1>Hello World</h1>
+            </header>
+            <p>This classic introductory example will help you become familiar with the basics of setting up an Angular
+                project, creating a component, and displaying content in the browser.</p>
+            <h3>Creating Your First Angular Project</h3>
+            <p>
+                To get started, you'll need to have Angular CLI (Command Line Interface) installed. If you haven't
+                installed it yet, you can do so using the following command in your terminal/command line:
+            </p>
+            <code>npm install -g @angular/cli </code>
+            <p>Now, let's create a new Angular project:</p>
+            <code>ng new hello-world-app</code>
+            <p>Follow the prompts to configure your project. Once the project is generated, navigate to the project
+                folder:</p>
+            <code>cd hello-world-app</code>
+            <h3>Creating a Component</h3>
+            <code>ng generate component hello-world</code>
+            <p>or for short:</p>
+            <code>ng g c hello-world</code>
+            <p>These two commands both will generate files for your component, including the component class, template,
+                styles, and
+                unit test.</p>
+            <h3>Editing the Component Template</h3>
+            <p>Open the generated hello-world.component.html file and replace its content with the following:</p>
+            <code>&lt;h1&gt;Hello, Angular World!&lt;/h1&gt;</code>
+            <h3>Displaying the Component</h3>
+            <p>Now that you have your component template ready, let's display it in the main application template.</p>
+            <p>Open the app.component.html file and replace its content with the following:</p>
+            <code>&lt;app-hello-world&gt;&lt;/app-hello-world&gt;</code>
+            <h3>Running the Application</h3>
+            <p>You're now ready to see your "Hello World" application in action. Run the following command in the
+                terminal/command line to start the development server:</p>
+            <code>ng serve</code>
+            <p>Open your web browser and navigate to http://localhost:4200. You should see the "Hello, Angular World!"
+                message displayed on the page.</p>
+            <h3>Great job!</h3>
+            <p>Congratulations! You've successfully created and run your first Angular application. This simple example
+                demonstrates the fundamental steps of setting up a project, generating components, and displaying
+                content in the browser. As you explore further, you'll discover how Angular's powerful features enable
+                you to build dynamic and interactive web applications with ease.</p>
+
         </section>
         <section id="Components" class="section main-section -section">
+            <hr>
             <header>Components</header>
             <p></p>
             <code></code>
